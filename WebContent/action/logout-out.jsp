@@ -2,8 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="../header.jsp" %>
 <%@include file="template.css" %>
+<p>ログアウトしました。</p>
+<a href="login-in.jsp">ログイン画面へ</a>
 
-<div class="container">
-	<%@include file="menu.jsp" %>
-</div>
 <%@include file="../footer.jsp" %>
