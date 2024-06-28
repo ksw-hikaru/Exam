@@ -6,7 +6,7 @@ public class Teacher implements Serializable {
     private String id;
     private String password;
     private String name;
-    private String schoolCd;
+    private String school_Cd;
 
     public String getId() {
         return id;
@@ -33,10 +33,10 @@ public class Teacher implements Serializable {
     }
 
     public String getSchoolCd() {
-        return schoolCd;
+        return school_Cd;
     }
 
-    public void setSchoolCd(String schoolCd) {
-        this.schoolCd = schoolCd;
+    public void setSchoolCd(String school_Cd) {
+        this.school_Cd = school_Cd;
     }
 }

@@ -34,4 +34,4 @@ public class SubjectDAO extends DAO {
 
         return list;
     }
-}
+

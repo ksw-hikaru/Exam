@@ -9,34 +9,38 @@ import java.util.List;
 import bean.Student;
 
 public class StudentDAO extends DAO {
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/ksw-hikaru/Exam.git
 
     public List<Student> filter(int entYear, String classNum, boolean isAttend) throws Exception {
         List<Student> list = new ArrayList<>();
-        Connection con = getConnection();
 
-        String query = "SELECT * FROM student WHERE entyear = ? AND classnum = ? AND isattend = ?";
-        PreparedStatement st = con.prepareStatement(query);
-        st.setInt(1, entYear);
-        st.setString(2, classNum);
-        st.setBoolean(3, isAttend);
-        ResultSet rs = st.executeQuery();
+        String query = "SELECT * FROM student WHERE ent_year = ? AND class_num = ? AND is_attend = ?";
 
-        while (rs.next()) {
-            Student s = new Student();
-            s.setNo(rs.getInt("no"));
-            s.setName(rs.getString("name"));
-            s.setEntYear(rs.getInt("entyear"));
-            s.setClassNum(rs.getString("classnum"));
-            s.setAttend(rs.getBoolean("isattend"));
-            s.setSchoolCd(rs.getString("schoolcd"));
-            list.add(s);
+        try (Connection con = getConnection();
+             PreparedStatement st = con.prepareStatement(query)) {
+
+            st.setInt(1, entYear);
+            st.setString(2, classNum);
+            st.setBoolean(3, isAttend);
+
+            try (ResultSet rs = st.executeQuery()) {
+                while (rs.next()) {
+                    Student s = new Student();
+                    s.setNo(rs.getInt("no"));
+                    s.setName(rs.getString("name"));
+                    s.setEntYear(rs.getInt("ent_year"));
+                    s.setClassNum(rs.getString("class_num"));
+                    s.setAttend(rs.getBoolean("is_attend"));
+                    s.setSchoolCd(rs.getString("school_cd"));
+                    list.add(s);
+                }
+            }
         }
-
-        rs.close();
-        st.close();
-        con.close();
 
         return list;
     }
+
 }
