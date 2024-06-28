@@ -14,7 +14,6 @@ public class StudentSearchAction extends Action {
     public String execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
         StudentDAO dao = new StudentDAO();
 
-
         String entYearStr = req.getParameter("entYear");
         String classNum = req.getParameter("classNum");
         String isAttendStr = req.getParameter("isAttend");

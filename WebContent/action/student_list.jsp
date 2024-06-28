@@ -7,6 +7,7 @@
     <%@include file="menu.jsp" %>
     <div class="content">
         <h1>学生管理</h1>
+        <a href="gakuseitouroku.jsp">新規登録</a>
         <form action="StudentSearch.action" method="post">
 
 		    <label for="entYear">入学年度:
@@ -81,7 +82,7 @@
                             <td>${student.name}</td>
                             <td>${student.classNum}</td>
                             <td>${student.attend ? '〇' : '×'}</td>
-                            <td><a href="">変更</a></td>
+                            <td><a href="gakuseihenkou.jsp">変更</a></td>
                         </tr>
                     </c:forEach>
                 </table>
