@@ -34,12 +34,10 @@ public class StudentSearchAction extends Action {
             isAttend = true;
         }
 
-        // セッションからschoolCdを取得
         HttpSession session = req.getSession();
         String schoolCd = (String) session.getAttribute("schoolCd");
 
         if (schoolCd == null) {
-            // schoolCdが取得できなかった場合の処理（例：エラーメッセージを設定して戻る）
             req.setAttribute("errorMessage", "学校コードが取得できませんでした。ログインしてください。");
             return "error.jsp";
         }
