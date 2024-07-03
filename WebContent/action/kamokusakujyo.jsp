@@ -22,7 +22,6 @@
     <div class="content">
         <h2>科目情報削除</h2>
         <form action="SubjectDelete.action" method="post">
-            <p>「Javaプログラミング基礎(F02)」を削除してもよろしいですか</p>
             <input type="hidden" name="subjectCode" value="F02" />
             <input type="submit" class="delete-button" value="削除" />
         </form>

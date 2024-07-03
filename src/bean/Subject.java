@@ -7,11 +7,11 @@ public class Subject implements Serializable {
     private String cd;
     private String name;
 
-    public String getSubjectcd() {
+    public String getSchoolcd() {
         return school_cd;
     }
 
-    public void setSubjectcd(String school_cd) {
+    public void setSchoolcd(String school_cd) {
         this.school_cd = school_cd;
     }
 
@@ -23,7 +23,7 @@ public class Subject implements Serializable {
         this.name = name;
     }
 
-    public String Cd() {
+    public String getCd() {
         return cd;
     }
 
