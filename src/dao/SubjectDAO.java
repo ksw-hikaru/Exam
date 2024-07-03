@@ -27,7 +27,7 @@ public class SubjectDAO extends DAO {
 	        s.setSchoolCd(rs.getString("school_cd"));
 	        list.add(s);
         }
-
+//unti
 	    st.close();
 	    con.close();
 
