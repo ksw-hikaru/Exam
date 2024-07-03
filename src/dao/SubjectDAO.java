@@ -43,6 +43,7 @@ public class SubjectDAO extends DAO {
 
     		int rowsAffected=st.executeUpdate();
     		return rowsAffected > 0;
+
     	} catch (SQLException e) {
     		e.printStackTrace();
     		return false;

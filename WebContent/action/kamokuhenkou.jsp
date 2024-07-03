@@ -1,13 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>科目変更</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <%@ include file="../header.jsp" %>
+<%@ include file="../header.jsp" %>
+<%@include file="template.css" %>
+<div class="container">
+    <%@include file="menu.jsp" %>
     <div class="content">
         <h1>科目変更</h1>
         <form action="changeSubject" method="post">
@@ -30,7 +25,5 @@
             </table>
         </form>
     </div>
-
-    <%@ include file="../footer.jsp" %>
-</body>
-</html>
+</div>
+<%@ include file="../footer.jsp" %>

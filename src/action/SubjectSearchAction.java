@@ -23,7 +23,7 @@ public class SubjectSearchAction extends Action {
                     return "error.jsp";
 
                 }
-        System.out.println("School Code: " + schoolCd); // ログでschoolCdを確認
+        System.out.println("School Code: " + schoolCd);
 
 
         // SubjectDAOを使用してデータベースから結果を取得
