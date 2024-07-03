@@ -10,33 +10,34 @@ import tool.Action;
 
 public class SubjectCreateAction extends Action {
 	public  String execute(HttpServletRequest req, HttpServletResponse res	) throws Exception{
-		 	String subjectCode = req.getParameter("cd");
-	        String subjectName = req.getParameter("name");
 
-	        HttpSession session = req.getSession();
-	        String schoolCd =(String) session.getAttribute("schoolCd");
-	        System.out.println("School Code: " + schoolCd);
+        HttpSession session = req.getSession();
+        String schoolCd =(String) session.getAttribute("schoolCd");
+        System.out.println("School Code: " + schoolCd);
 
-	        Subject subject = new Subject();
-	        subject.setCd(subjectCode);
-	        subject.setName(subjectName);
-	        subject.setSchoolCd(schoolCd);
+		String subjectCode = req.getParameter("cd");
+		String subjectName = req.getParameter("name");
 
-	        SubjectDAO subjectDAO = new SubjectDAO();
 
-	        try {
-	            boolean isSaved = subjectDAO.save(subject);
-	            if (isSaved) {
-	                res.sendRedirect("kamokutouroku_sakusesu.jsp");
-	            } else {
-	                res.sendRedirect("error.jsp");
-	            }
-	        } catch (Exception e) {
-	            throw new ServletException("Error saving subject", e);
-	        }
+        Subject subject = new Subject();
+        subject.setSchoolCd(schoolCd);
+        subject.setCd(subjectCode);
+        subject.setName(subjectName);
 
-	        return "kamokutouroku.jsp";
-}
+
+        SubjectDAO subjectDAO = new SubjectDAO();
+
+        try {
+            boolean isSaved = subjectDAO.save(subject);
+            if (isSaved) {
+                res.sendRedirect("kamokutouroku_sakusesu.jsp");
+            } else {
+                res.sendRedirect("error.jsp");
+            }
+        } catch (Exception e) {
+            throw new ServletException("Error saving subject", e);
+        }
+
+        return "kamokutouroku.jsp";
 	}
-
-
+}
