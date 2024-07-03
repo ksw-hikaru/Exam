@@ -1,30 +1,36 @@
-<%@page contentType="text/html; charset=UTF-8" %>
-<%@include file="../header.jsp" %>
-<%@include file="template.css" %>
-
-<div class="container">
-    <%@include file="menu.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>科目変更</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <%@ include file="../header.jsp" %>
     <div class="content">
-        <h2>科目情報変更</h2>
-        <form action="SubjectUpdate.action" method="post">
+        <h1>科目変更</h1>
+        <form action="changeSubject" method="post">
             <table>
                 <tr>
-                    <td>科目コード</td>
-                    <td><input type="text" name="subjectCode" value="F02"></td> <!-- 初期値を設定 -->
+                    <td>学校コード:</td>
+                    <td><input type="text" name="school_cd" required></td>
                 </tr>
                 <tr>
-                    <td>科目名</td>
-                    <td><input type="text" name="subjectName" value="Javaプログラミング基礎"></td> <!-- 初期値を設定 -->
+                    <td>科目コード:</td>
+                    <td><input type="text" name="cd" required></td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="text-align: center;">
-                        <input type="submit" value="変更">
-                    </td>
+                    <td>新しい科目名:</td>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="変更"></td>
                 </tr>
             </table>
         </form>
-        <a href="previousPage.action">戻る</a>
     </div>
-</div>
 
-<%@include file="../footer.jsp" %>
+    <%@ include file="../footer.jsp" %>
+</body>
+</html>
