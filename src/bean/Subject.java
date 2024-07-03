@@ -3,20 +3,17 @@ package bean;
 import java.io.Serializable;
 
 public class Subject implements Serializable {
-    private String schoolcd;
+    private String schoolCd;
     private String cd;
     private String name;
 
 
     public String getSchoolCd() {
-        return schoolcd;
+        return schoolCd;
     }
 
-
-
-
-    public void setSchoolCd(String schoolcd) {
-        this.schoolcd = schoolcd;
+    public void setSchoolCd(String schoolCd) {
+        this.schoolCd = schoolCd;
     }
 
     public String getCd() {

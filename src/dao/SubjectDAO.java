@@ -10,24 +10,27 @@ import bean.Subject;
 
 public class SubjectDAO extends DAO {
 
-	public List<Subject> filter(String schoolcd, String cd, String name) throws Exception {
-	    List<Subject> list = new ArrayList<>();
+	public List<Subject> filter(String schoolCd) throws Exception {
 
-	    String query = "SELECT * FROM SUBJECT WHERE school_cd = ?";
+		List<Subject> list = new ArrayList<>();
 
-	    try (Connection con = getConnection();
-        	 PreparedStatement st = con.prepareStatement(query)) {
+		Connection con = getConnection();
+	    PreparedStatement st = con.prepareStatement("SELECT * FROM SUBJECT WHERE school_cd = ?");
 
-	        try (ResultSet rs = st.executeQuery()) {
-                while (rs.next()) {
-		            Subject s = new Subject();
-		            s.setCd(rs.getString("cd"));
-		            s.setName(rs.getString("name"));
-		            s.setSchoolCd(rs.getString("school_cd"));
-		            list.add(s);
-                }
-	        }
-	        }
-	    return list;
+	    st.setString(1, schoolCd);
+
+	    ResultSet rs = st.executeQuery();
+	    while (rs.next()) {
+	    	Subject s = new Subject();
+	        s.setCd(rs.getString("cd"));
+	        s.setName(rs.getString("name"));
+	        s.setSchoolCd(rs.getString("school_cd"));
+	        list.add(s);
+        }
+
+	    st.close();
+	    con.close();
+
+		return list;
 	}
 }

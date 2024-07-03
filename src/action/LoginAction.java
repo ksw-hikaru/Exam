@@ -20,7 +20,7 @@ public class LoginAction extends Action {
 
         if (teacher != null) {
             session.setAttribute("teacher", teacher);
-            session.setAttribute("schoolCd", teacher.getSchoolCd()); // schoolCdをセッションに設定
+            session.setAttribute("schoolCd", teacher.getSchoolCd());
             return "index.jsp";
         }
 

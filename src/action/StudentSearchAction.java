@@ -44,7 +44,7 @@ public class StudentSearchAction extends Action {
             return "error.jsp";
         }
 
-        System.out.println("School Code: " + schoolCd); // ログでschoolCdを確認
+        System.out.println("School Code: " + schoolCd);
 
         List<Student> list = dao.filter(entYear, classNum, isAttend, schoolCd);
 
