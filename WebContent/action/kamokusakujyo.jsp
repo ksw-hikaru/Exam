@@ -1,32 +1,32 @@
-<%@page contentType="text/html; charset=UTF-8" %>
-<%@include file="../header.jsp" %>
-<%@include file="template.css" %>
-<style>
-    .delete-button {
-        background-color: red;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 15px; /*
-    }
-    .back-link {
-        color: blue;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 10px;
-    }
-</style>
-<div class="container">
-    <%@include file="menu.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>科目削除</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <%@ include file="../header.jsp" %>
     <div class="content">
-        <h2>科目情報削除</h2>
-        <form action="SubjectDelete.action" method="post">
-            <p>「Javaプログラミング基礎(F02)」を削除してもよろしいですか</p>
-            <input type="hidden" name="subjectCode" value="F02" />
-            <input type="submit" class="delete-button" value="削除" />
+        <h1>科目削除</h1>
+        <form action="deleteSubject" method="post">
+            <table>
+                <tr>
+                    <td>学校コード:</td>
+                    <td><input type="text" name="school_cd" required></td>
+                </tr>
+                <tr>
+                    <td>科目コード:</td>
+                    <td><input type="text" name="cd" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="削除"></td>
+                </tr>
+            </table>
         </form>
-        <a href="main.action" class="back-link">戻る</a>
     </div>
-</div>
-<%@include file="../footer.jsp" %>
+
+    <%@ include file="../footer.jsp" %>
+</body>
+</html>

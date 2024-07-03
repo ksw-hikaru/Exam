@@ -10,7 +10,6 @@ import java.util.List;
 import bean.Student;
 
 public class StudentDAO extends DAO {
-
     public List<Student> filter(int entYear, String classNum, boolean isAttend, String schoolCd) throws Exception {
         List<Student> list = new ArrayList<>();
 
