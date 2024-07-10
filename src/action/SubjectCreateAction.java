@@ -9,8 +9,7 @@ import dao.SubjectDAO;
 import tool.Action;
 
 public class SubjectCreateAction extends Action {
-	public  String execute(HttpServletRequest req, HttpServletResponse res	) throws Exception{
-
+	public String execute(HttpServletRequest req, HttpServletResponse res) throws Exception{
         HttpSession session = req.getSession();
         String schoolCd =(String) session.getAttribute("schoolCd");
         System.out.println("School Code: " + schoolCd);

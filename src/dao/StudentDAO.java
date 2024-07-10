@@ -43,8 +43,8 @@ public class StudentDAO extends DAO {
     public boolean save(Student student) throws Exception {
         String query = "INSERT INTO STUDENT (NO, NAME, ENT_YEAR, CLASS_NUM, IS_ATTEND, SCHOOL_CD) VALUES (?, ?, ?, ?, ?, ?)";
 
-        try (Connection con = getConnection();
-             PreparedStatement st = con.prepareStatement(query)) {
+        try(Connection con=getConnection();
+        		PreparedStatement st = con.prepareStatement(query)) {
 
             st.setString(1, student.getNo());
             st.setString(2, student.getName());
@@ -59,6 +59,26 @@ public class StudentDAO extends DAO {
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
+        }
+    }
+     public boolean update(Student student) throws Exception {
+        String query = "UPDATE STUDENT SET NAME = ?, CLASS_NUM = ?, IS_ATTEND = ? WHERE NO = ? AND ENT_YEAR = ?";
+
+        try (Connection con = getConnection();
+             PreparedStatement st = con.prepareStatement(query)) {
+
+            st.setString(1, student.getName());
+            st.setString(2, student.getClassNum());
+            st.setBoolean(3, student.isAttend());
+            st.setString(4, student.getNo());
+            st.setInt(5, student.getEntYear());
+
+            int rowsAffected = st.executeUpdate();
+            return rowsAffected > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e; // 例外を呼び出し元に投げる
         }
     }
 }
