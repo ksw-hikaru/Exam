@@ -1,4 +1,4 @@
-package dao;
+	package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -37,9 +37,9 @@ public class SubjectDAO extends DAO {
     	try(Connection con=getConnection();
     			 PreparedStatement st = con.prepareStatement(query)) {
 
-    		st.setString(1, subject.getCd());
-    		st.setString(2, subject.getName());
-    		st.setString(3, subject.getSchoolCd());
+    		st.setString(1, subject.getSchoolCd());
+    		st.setString(2, subject.getCd());
+    		st.setString(3, subject.getName());
 
     		int rowsAffected=st.executeUpdate();
     		return rowsAffected > 0;

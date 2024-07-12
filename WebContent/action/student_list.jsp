@@ -41,7 +41,7 @@
                 <p>学生情報が存在しません。</p>
             </c:when>
             <c:otherwise>
-                <h3>検索結果: ${students.size()}件</h3>
+             <h3>検索結果: ${students.size()}件</h3>
                 <table border="1">
                     <tr>
                         <th>入学年度</th>

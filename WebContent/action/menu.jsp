@@ -3,7 +3,7 @@
 </div>
 <nav class="navigation">
 <a href="#">メニュー</a>
-<a href="#">学生管理</a>
+<a href="student_list.jsp">学生管理</a>
 <label>成績管理</label>
 <a href="kamokutouroku.jsp">成績登録</a>
 <a href="#">成績参照</a>
