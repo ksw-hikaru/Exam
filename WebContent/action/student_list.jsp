@@ -2,14 +2,12 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="../header.jsp" %>
 <%@include file="template.css" %>
-
 <div class="container">
     <%@include file="menu.jsp" %>
     <div class="content">
         <h2>学生管理</h2>
-        <a href="gakuseitouroku.jsp">新規登録</a>
+        <a href="student_create.jsp">新規登録</a>
         <form action="StudentSearch.action" method="post">
-
 		    <label for="entYear">入学年度:
 		    <select id="entYear" name="entYear" >
 		    	<option value="">-------</option>
@@ -32,7 +30,6 @@
 		    <br>
 		    <label for="isAttend">在学中:</label>
 		    <input type="checkbox" id="isAttend" name="isAttend" value="true"><br>
-
 		    <button type="submit">絞込み</button>
 		</form>
 
@@ -58,7 +55,7 @@
                             <td>${student.name}</td>
                             <td>${student.classNum}</td>
                             <td>${student.attend ? '〇' : '×'}</td>
-                            <td><a href="gakuseihenkou.jsp">変更</a></td>
+                            <td><a href="student_update.jsp?no=${student.no}&entYear=${student.entYear}">変更</a></td>
                         </tr>
                     </c:forEach>
                 </table>

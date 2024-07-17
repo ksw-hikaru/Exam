@@ -9,34 +9,34 @@ import dao.SubjectDAO;
 import tool.Action;
 
 public class SubjectCreateAction extends Action {
-	public  String execute(HttpServletRequest req, HttpServletResponse res	) throws Exception{
-		 	String subjectCode = req.getParameter("cd");
-	        String subjectName = req.getParameter("name");
+	public String execute(HttpServletRequest req, HttpServletResponse res) throws Exception{
+        HttpSession session = req.getSession();
+        String schoolCd =(String) session.getAttribute("schoolCd");
+        System.out.println("School Code: " + schoolCd);
 
-	        HttpSession session = req.getSession();
-	        String schoolCd =(String) session.getAttribute("schoolCd");
-	        System.out.println("School Code: " + schoolCd);
+		String subjectCode = req.getParameter("cd");
+		String subjectName = req.getParameter("name");
 
-	        Subject subject = new Subject();
-	        subject.setCd(subjectCode);
-	        subject.setName(subjectName);
-	        subject.setSchoolCd(schoolCd);
 
-	        SubjectDAO subjectDAO = new SubjectDAO();
+        Subject subject = new Subject();
+        subject.setSchoolCd(schoolCd);
+        subject.setCd(subjectCode);
+        subject.setName(subjectName);
 
-	        try {
-	            boolean isSaved = subjectDAO.save(subject);
-	            if (isSaved) {
-	                res.sendRedirect("kamokutouroku_sakusesu.jsp");
-	            } else {
-	                res.sendRedirect("error.jsp");
-	            }
-	        } catch (Exception e) {
-	            throw new ServletException("Error saving subject", e);
-	        }
 
-	        return "kamokutouroku.jsp";
-}
+        SubjectDAO subjectDAO = new SubjectDAO();
+
+        try {
+            boolean isSaved = subjectDAO.save(subject);
+            if (isSaved) {
+                res.sendRedirect("kamokutouroku_sakusesu.jsp");
+            } else {
+                res.sendRedirect("error.jsp");
+            }
+        } catch (Exception e) {
+            throw new ServletException("Error saving subject", e);
+        }
+
+        return "kamokutouroku.jsp";
 	}
-
-
+}

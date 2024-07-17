@@ -25,18 +25,19 @@
 <style>
     .menu {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-top: 20px;
     }
     .menu-item {
-        width: 30%;
+        flex-grow: 1;
+        flex-basis: 0;
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
     .menu-item a {
         display: block;
-        margin: 10px 0;
+        margin: 30px;10;
         color: blue;
         font-size: 18px;
         text-decoration: none;

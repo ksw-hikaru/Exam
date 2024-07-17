@@ -16,24 +16,14 @@ public class SubjectSearchAction extends Action {
 
         HttpSession session = req.getSession();
         String schoolCd =(String) session.getAttribute("schoolCd");
-        if (schoolCd == null) {
 
-                    req.setAttribute("errorMessage", "学校コードが取得できませんでした。ログインしてください。");
+        System.out.println("School Code サーチアクション: " + schoolCd);
 
-                    return "error.jsp";
-
-                }
-        System.out.println("School Code: " + schoolCd);
-
-
-        // SubjectDAOを使用してデータベースから結果を取得
         SubjectDAO dao = new SubjectDAO();
         List<Subject> list = dao.filter(schoolCd);
 
-        // 取得した結果をリクエスト属性に設定
         req.setAttribute("subjects", list);
 
-        // 次のページに転送
-        return "Subject_list.jsp"; // 転送先のJSPページを指定
+        return "Subject_list.jsp";
     }
 }

@@ -12,7 +12,6 @@ import bean.Subject;
 public class SubjectDAO extends DAO {
 
 	public List<Subject> filter(String schoolCd) throws Exception {
-
 		List<Subject> list = new ArrayList<>();
 
 		Connection con = getConnection();
@@ -28,6 +27,10 @@ public class SubjectDAO extends DAO {
 	        s.setSchoolCd(rs.getString("school_cd"));
 	        list.add(s);
 	    }
+
+	    st.close();
+	    con.close();
+
 	    return list;
 	}
 
