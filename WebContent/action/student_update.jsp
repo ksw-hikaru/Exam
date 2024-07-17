@@ -7,10 +7,10 @@
         <h2>学生情報更新</h2>
         <form action="StudentUpdate.action" method="post">
 		    <label for="entYear">入学年度:<br><br>
-		    <input type="hidden" id="entYear" name="entYear" value="<%= request.getParameter("entYear") %>"><%= request.getParameter("entYear") %><br><br>
+		    <input type="text" id="entYear" name="entYear" value="<%= request.getParameter("entYear") %>" readonly class="no-border"><br><br>
 		    </label>
 		    <label for="no">学籍番号:<br><br>
-		    <input type="hidden" id="no" name="no" value="<%= request.getParameter("no") %>"><%= request.getParameter("no") %><br><br>
+		    <input type="text" id="no" name="no" value="<%= request.getParameter("no") %>"readonly class="no-border"><br><br>
 		    </label>
 		    <label for="name">氏名:<br><br>
 		    <input type="text" id="name" name="name" value=""><br><br>
@@ -29,6 +29,7 @@
 
 		    <button type="submit">更新</button>
 		</form>
+		<a href="student_list.jsp">戻る</a>
     </div>
 </div>
 <%@include file="../footer.jsp" %>

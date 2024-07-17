@@ -5,6 +5,7 @@
     <%@include file="menu.jsp" %>
     <div class="content">
         <h2>success</h2>
+        <br><a href="SubjectSearch.action">戻る</a>
 
     </div>
 </div>
