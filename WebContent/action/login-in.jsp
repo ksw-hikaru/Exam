@@ -17,11 +17,23 @@
 
 			<div class="password">
 				<div class="label">password</div>
-				<input type="text" id="password" name="password" size="20" maxlength="20" placeholder="20文字以内の半角でご入力ください"required>
+				<input type="password" id="password" name="password" size="20" maxlength="20" placeholder="20文字以内の半角でご入力ください"required>
 			</div>
-			<p><input type="checkbox" name="chk_d_ps">パスワードを表示</p>
+			<p><input type="checkbox" id="show_password" name="chk_d_ps" onclick="togglePasswordVisibility()">パスワードを表示</p>
 			<input type="submit"name="login"value="ログイン">
 		</form>
 	</div>
 </div>
 <%@include file="../footer.jsp" %>
+
+<script>
+function togglePasswordVisibility() {
+    var passwordField = document.getElementById("password");
+    var showPasswordCheckbox = document.getElementById("show_password");
+    if (showPasswordCheckbox.checked) {
+        passwordField.type = "text";
+    } else {
+        passwordField.type = "password";
+    }
+}
+</script>

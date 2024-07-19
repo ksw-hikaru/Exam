@@ -7,15 +7,16 @@
         <h2>メニュー</h2>
         <div class="menu">
             <div class="menu-item" style="background-color: lightcoral;">
-                <a href="">学生管理</a>
+                <a href="student_list.jsp">学生管理</a>
             </div>
             <div class="menu-item" style="background-color: lightgreen;">
-                <a href="">成績管理</a>
+                <div>成績管理
                 <a href="">成績登録</a>
                 <a href="">成績参照</a>
+                </div>
             </div>
             <div class="menu-item" style="background-color: lightblue;">
-                <a href="">科目管理</a>
+                <a href="SubjectSearch.action">科目管理</a>
             </div>
         </div>
     </div>
