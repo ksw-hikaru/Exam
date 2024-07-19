@@ -5,7 +5,11 @@ import java.io.Serializable;
 public class Subject implements Serializable {
     private String schoolCd;
     private String cd;
+<<<<<<< HEAD
     private String name;
+=======
+    private String name;
+>>>>>>> branch 'master' of https://github.com/ksw-hikaru/Exam.git
 
     public String getSchoolCd() {
         return schoolCd;
