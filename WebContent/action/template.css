@@ -16,7 +16,6 @@
     padding: 10px;
     text-decoration: none;
 }
-
 .content {
     margin-left: 20px;
 }
@@ -26,19 +25,23 @@ body {
 }
 
 footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+	flex-direction: column;
+	align-items: center;
 }
 footer p {
     margin:  0;
 }
 .header-content {
             background-color: #e6fcff;
-            padding: 1px;
+            padding: 0.1px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 .header-content h1 {
             margin: 6;
@@ -48,4 +51,26 @@ footer p {
             border: none;
             background-color: transparent;
         }
+.menu {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .menu-item {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .menu-item a {
+        display: block;
+        margin: 30px;10;
+        color: blue;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .menu-item a:hover {
+        text-decoration: underline;
+    }
 </style>
