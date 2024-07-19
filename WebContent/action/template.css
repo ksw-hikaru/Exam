@@ -3,7 +3,11 @@
 .container {
     display: flex;
 }
-
+.sidebar {
+    width: 15%;
+    padding-right: 10px;
+    height: auto;
+}
 .navigation {
     width: 15%;
     border-right: 1px solid #808080;
@@ -14,7 +18,7 @@
 .navigation a {
     display: block;
     padding: 10px;
-    text-decoration: none;
+
 }
 
 .content {
@@ -48,4 +52,5 @@ footer p {
             border: none;
             background-color: transparent;
         }
+
 </style>
