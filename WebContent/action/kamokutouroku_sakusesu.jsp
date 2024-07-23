@@ -1,26 +1,16 @@
-<<<<<<< HEAD
-<%@page contentType="text/html; charset=UTF-8" %>
-<%@include file="../header.jsp" %>
-<%@include file="template.css" %>
-<div class="container">
-    <%@include file="menu.jsp" %>
-    <div class="content">
-        <h2>success</h2>
-        <br><a href="SubjectSearch.action">戻る</a>
-=======
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ include file="../header.jsp" %>
 <%@ include file="template.css" %>
->>>>>>> branch 'master' of https://github.com/ksw-hikaru/Exam.git
-
 <div class="container">
     <%@ include file="menu.jsp" %>
     <div class="content">
-        <h2>科目情報変更</h2>
-        <div class="message">
-            変更が完了しました
+        <div style="background-color: #f8f9fa; padding: 5px 147px; border-radius: 4px; margin: 20px 0 0 0; width: 100%; text-align: left;">
+            <h2 style="margin: 0;">科目情報削除</h2>
         </div>
-        <a href="subjectList.action" class="back-link">科目一覧</a>
+        <div class="message" style="background-color: #d4edda; color: #155724; padding: 10px 147px; border-radius: 4px; margin: 20px 0; width: 100%; text-align: center;">
+            削除が完了しました
+        </div>
+        <a href="SubjectSearch.action" style="color: #007bff; text-decoration: none;">科目一覧</a>
     </div>
 </div>
 <%@ include file="../footer.jsp" %>

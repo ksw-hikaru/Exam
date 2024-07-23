@@ -27,7 +27,7 @@
     }
     .status {
         margin-top: 10px;
-        background-color: lightgreen;
+        background-color: lightgreen;  /* 背景色を明るい緑に変更 */
         padding: 10px;
         border: 1px solid green;
     }
@@ -37,7 +37,6 @@
     <div class="content">
         <h1>科目情報変更</h1>
         <div class="status">変更が完了しました</div>
-
     </div>
 </div>
 <%@ include file="../footer.jsp" %>

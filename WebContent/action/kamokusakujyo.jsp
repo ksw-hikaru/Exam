@@ -12,7 +12,7 @@
 	        </label>
 	        <input type="hidden" name="cd" value="<%= request.getParameter("cd") %>">
             <input type="hidden" name="name" value="<%= request.getParameter("name") %>">
-            <input type="submit" value="削除">
+            <input type="submit" value="削除" style="background-color: red; color: white; border-radius: 8px; padding: 10px 10px; border: none; cursor: pointer;">
         </form>
 		<br><a href="SubjectSearch.action">戻る</a>
     </div>
