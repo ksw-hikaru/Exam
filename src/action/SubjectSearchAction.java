@@ -16,12 +16,7 @@ public class SubjectSearchAction extends Action {
 
         HttpSession session = req.getSession();
         String schoolCd =(String) session.getAttribute("schoolCd");
-
-<<<<<<< HEAD
         System.out.println("School Code サーチアクション: " + schoolCd);
-=======
-        System.out.println("School Code: サーチアクション " + schoolCd);
->>>>>>> branch 'master' of https://github.com/ksw-hikaru/Exam.git
 
         SubjectDAO dao = new SubjectDAO();
         List<Subject> list = dao.filter(schoolCd);

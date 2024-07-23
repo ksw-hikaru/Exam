@@ -22,28 +22,3 @@
     </div>
 </div>
 <%@ include file="../footer.jsp" %>
-
-<style>
-    .menu {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
-    .menu-item {
-        flex-grow: 1;
-        flex-basis: 0;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-    .menu-item a {
-        display: block;
-        margin: 30px;10;
-        color: blue;
-        font-size: 18px;
-        text-decoration: none;
-    }
-    .menu-item a:hover {
-        text-decoration: underline;
-    }
-</style>

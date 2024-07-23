@@ -1,12 +1,8 @@
 <style>
-
 .container {
     display: flex;
-}
-.sidebar {
-    width: 15%;
-    padding-right: 10px;
-    height: auto;
+    margin-top:5px;
+    margin-bottom:5px;
 }
 .navigation {
     width: 15%;
@@ -20,94 +16,99 @@
     padding: 10px;
 
 }
-
 .content {
     margin-left: 20px;
-    width: 85%; /* コンテンツエリアの幅を設定 */
+    width: 85%;
 }
 
 body {
     margin-left: 15%;
     margin-right: 15%;
 }
+h2 {
+	margin-top:0;
+	margin-bottom:0;
+    background-color:#f5f5f5;
+}
 
 footer{
+    text-align: center;
+    padding: 1px;
+    background-color: #f0f0f0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ebebeb; /* フッターの帯：少し薄い灰色 */
-    width	: 80%;
-    text-align: center;
-    color: #808080; /* 薄い文字色 */
-    margin-bottom: 60px ;
-    margin-left: 80px;
-
+    color: #808080;
 }
 footer p {
     margin: 0 auto;
 }
 
 .header-content {
-    background-color: #e6fcff;
-    padding: 1px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+            background-color: #e6fcff;
+            padding: 0.1px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+.header-content h1 {
+            margin: 6;
+            color: #333;
 }
-<<<<<<< HEAD
 .no-border {
             border: none;
             background-color: transparent;
         }
-
-</style>
-=======
 
 .header-content h1 {
     margin: 6px;
     color: #333;
 }
 
-/* テーブルを横いっぱいに広げる */
 table {
     width: 100%;
     border-collapse: collapse;
+    border-bottom: 1px solid #000;
 }
 
 table th, table td {
     padding: 8px;
     text-align: left;
-    border: none; /* 格子を削除 */
-}
-
-/* その他のセルに線を追加 */
-table th, table td{
     border-bottom: 1px solid #000;
 }
 
-
-
 .banner h1 {
-    background-color: #f5f5f5; /* さらに薄い灰色の背景色 */
+    background-color: #f5f5f5;
     margin: 0;
     padding: 10px;
 }
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0; /* 余白をゼロに設定 */
-}
 
-.container {
-    display: flex;
-    flex: 1; /* 残りのスペースを埋める */
-}
 .banner {
      overflow: auto; /* Clear floats within the banner */
 }
 
-
-
+.menu {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .menu-item {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .menu-item a {
+        display: block;
+        margin: 30px;10;
+        color: blue;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .menu-item a:hover {
+        text-decoration: underline;
+    }
 </style>
->>>>>>> branch 'master' of https://github.com/ksw-hikaru/Exam.git
+

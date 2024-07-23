@@ -7,7 +7,7 @@
     <div class="content">
         <h2>学生情報変更</h2>
         <p>学生情報の変更が完了しました。</p>
-        <p><a href="student_update.jsp" style="color: blue;">戻る</a>　<a href="student_list.jsp">学生一覧</a></p>
+		<p><a href="student_list.jsp">学生一覧</a></p>
     </div>
 </div>
 <%@include file="../footer.jsp" %>

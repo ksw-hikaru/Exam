@@ -3,7 +3,7 @@
 <%@include file="template.css" %>
 <style>
     .form-label {
-        margin-bottom: 10px; /* 適切な値を設定してください */
+        margin-bottom: 10px;
     }
 </style>
 <div class="container">
@@ -13,11 +13,11 @@
         <form action="StudentUpdate.action" method="post">
             <div class="form-label">
                 <label for="entYear">入学年度:</label><br>
-                <input type="text" id="entYear" name="entYear" value="<%= (request.getParameter("entYear") != null) ? request.getParameter("entYear") : "" %>"><br>
+                <input type="hidden" id="entYear" name="entYear" value="<%= request.getParameter("entYear") %>"><%= request.getParameter("entYear") %><br>
             </div>
             <div class="form-label">
                 <label for="no">学籍番号:</label><br>
-                <input type="text" id="no" name="no" value="<%= (request.getParameter("no") != null) ? request.getParameter("no") : "" %>"><br>
+                <input type="hidden" id="no" name="no" value="<%= request.getParameter("no") %>"><%= request.getParameter("no") %><br>
             </div>
             <div class="form-label">
                 <label for="name">氏名:</label><br>
@@ -38,8 +38,6 @@
 
             <button type="submit">変更</button>
         </form>
-
-        <!-- 戻るボタン -->
         <a href="student_list.jsp" style="color: blue;">戻る</a>
     </div>
 </div>
