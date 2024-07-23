@@ -72,14 +72,14 @@ public class SubjectDAO extends DAO {
         }
     }
     public boolean update(Subject subject) throws Exception{
-    	String query = "UPDATE SUBJECT SET SHOOL_CD=? AND CD = ? AND NAME = ?";
+    	String query = "UPDATE SUBJECT SET NAME = ? WHERE SCHOOL_CD = ? AND CD = ?";
 
     	try (Connection con = getConnection();
                 PreparedStatement st = con.prepareStatement(query)) {
 
-    		st.setString(1, subject.getSchoolCd());
-            st.setString(2, subject.getCd());
-            st.setString(3, subject.getName());
+    		st.setString(1, subject.getName());
+            st.setString(2, subject.getSchoolCd());
+            st.setString(3, subject.getCd());
 
             int rowsAffected = st.executeUpdate();
             return rowsAffected > 0;

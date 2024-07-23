@@ -48,10 +48,10 @@
                 <tr>
                     <td colspan="2">
                         <input type="submit" value="登録" class="submit-button"><br><br>
-                        <input type="button" value="戻る" class="back-button" onclick="window.location.href='menu.jsp'">
                     </td>
                 </tr>
             </table>
+            <a href="SubjectSearch.action" style="color: blue;">戻る</a>
         </form>
     </div>
 </div>

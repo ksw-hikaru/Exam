@@ -18,7 +18,7 @@
                     <tr>
                         <td>${subject.cd}</td>
                         <td>${subject.name}</td>
-                        <td><a href="kamokuhenko.jsp?cd=${subject.cd}">変更</a></td>
+                        <td><a href="subject_update.jsp?cd=${subject.cd}">変更</a></td>
                         <td><a href="kamokusakujyo.jsp?cd=${subject.cd}">削除</a></td>
                     </tr>
                 </c:forEach>
