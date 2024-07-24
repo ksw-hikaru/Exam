@@ -28,8 +28,10 @@
 		    </label>
 
 		    <br>
-		    <label for="isAttend">在学中:</label>
-		    <input type="checkbox" id="isAttend" name="isAttend" value="true"><br>
+		    <label for="isAttend">
+		    <input type="checkbox" id="isAttend" name="isAttend" value="true">在学中
+		    </label>
+		    <br>
 		    <button type="submit">絞込み</button>
 		</form>
 
@@ -39,7 +41,7 @@
             </c:when>
             <c:otherwise>
              <h3>検索結果: ${students.size()}件</h3>
-                <table border="1">
+                <table >
                     <tr>
                         <th>入学年度</th>
                         <th>学生番号</th>

@@ -78,7 +78,7 @@ public class StudentDAO extends DAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            throw e; // 例外を呼び出し元に投げる
+            throw e;
         }
     }
 }

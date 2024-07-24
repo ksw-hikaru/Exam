@@ -22,8 +22,10 @@ public class LoginAction extends Action {
             session.setAttribute("teacher", teacher);
             session.setAttribute("schoolCd", teacher.getSchoolCd());
             return "index.jsp";
+        } else {
+            request.setAttribute("message", "IDまたはパスワードが違います");
+            request.setAttribute("id", id);
+            return "login-in.jsp";
         }
-
-        return "login-error.jsp";
     }
 }

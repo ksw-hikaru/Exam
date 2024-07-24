@@ -2,9 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="../header.jsp" %>
 <%@include file="template.css" %>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
+
     <meta charset="UTF-8">
     <title>学生情報変更</title>
     <style>
@@ -24,7 +22,6 @@
             margin: auto; /* 中央揃え */
         }
     </style>
-</head>
 <body>
     <div class="container">
         <%@include file="menu.jsp" %>
@@ -33,6 +30,7 @@
             <p class="background-success">学生情報の変更が完了しました。</p>
             <p><a href="student_list.jsp">学生一覧</a></p>
         </div>
+
     </div>
     <%@include file="../footer.jsp" %>
 </body>

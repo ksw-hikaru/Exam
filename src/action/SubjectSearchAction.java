@@ -16,7 +16,6 @@ public class SubjectSearchAction extends Action {
 
         HttpSession session = req.getSession();
         String schoolCd =(String) session.getAttribute("schoolCd");
-
         System.out.println("School Code サーチアクション: " + schoolCd);
 
         SubjectDAO dao = new SubjectDAO();
