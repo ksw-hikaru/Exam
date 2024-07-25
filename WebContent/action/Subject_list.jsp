@@ -5,7 +5,7 @@
 <div class="container">
     <%@ include file="menu.jsp" %>
     <div class="content">
-        <h1>科目管理</h1>
+        <h2>科目管理</h2>
         <a href="kamokutouroku.jsp">新規登録</a>
         <table class="underline">
             	<tr>

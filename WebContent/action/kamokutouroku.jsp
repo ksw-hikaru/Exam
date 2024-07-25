@@ -26,7 +26,7 @@
 <div class="container">
     <%@ include file="menu.jsp" %>
     <div class="content">
-        <h1>科目情報登録</h1>
+        <h2>科目情報登録</h2>
         <form action="SubjectCreate.action" method="post">
             <table>
                 <tr>

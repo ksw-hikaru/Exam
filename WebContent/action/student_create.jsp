@@ -4,7 +4,7 @@
 <div class="container">
     <%@include file="menu.jsp" %>
 	<div class="content">
-    <h1>学生情報登録</h1>
+    <h2>学生情報登録</h2>
 	    <form action="StudentCreate.action" method="post">
 
 		    <label for="entYear">入学年度<br>

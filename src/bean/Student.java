@@ -1,9 +1,7 @@
 package bean;
 
-import java.io.Serializable;
-
-public class Student implements Serializable {
-    private String no;
+public class Student {
+	private String no;
     private String name;
     private int entYear;
     private String classNum;
@@ -57,4 +55,5 @@ public class Student implements Serializable {
     public void setSchoolCd(String schoolCd) {
         this.schoolCd = schoolCd;
     }
+
 }

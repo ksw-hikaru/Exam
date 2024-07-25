@@ -35,8 +35,9 @@ public class StudentDAO extends DAO {
                     list.add(s);
                 }
             }
+        }catch (Exception e) {
+            e.printStackTrace();
         }
-
         return list;
     }
 
