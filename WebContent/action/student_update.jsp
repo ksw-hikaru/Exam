@@ -11,6 +11,9 @@
     <div class="content">
         <h2>学生情報更新</h2>
         <form action="StudentUpdate.action" method="post">
+        	<div>
+        	${errorMessage}
+        	</div>
             <div class="form-label">
                 <label for="entYear">入学年度:</label><br>
                 <input type="hidden" id="entYear" name="entYear" value="<%= request.getParameter("entYear") %>"><%= request.getParameter("entYear") %><br>

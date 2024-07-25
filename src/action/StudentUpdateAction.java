@@ -44,8 +44,8 @@ public class StudentUpdateAction extends Action {
         if (success) {
             return "student_update_success.jsp";
         } else {
-        	req.setAttribute("errorMessage", "更新失敗");
-            return "error.jsp";
+        	req.setAttribute("errorMessage", "学生が存在していません");
+            return "student_update.jsp";
         }
     }
 }
