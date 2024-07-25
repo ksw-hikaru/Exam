@@ -6,8 +6,8 @@
     <%@include file="menu.jsp" %>
     <div class="content">
         <h2>科目情報変更</h2>
-        <p>変更が完了しました。</p>
-		<p><a href="SubjectSearch.action">科目一覧</a></p>
+        <label>変更が完了しました。</label>
+        <p><a href="Subject_list.jsp">科目一覧</a></p>
     </div>
 </div>
 <%@include file="../footer.jsp" %>
