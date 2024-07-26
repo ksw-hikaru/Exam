@@ -6,7 +6,7 @@
     <div class="content">
         <h2>科目情報削除</h2>
         <label><p>削除が完了しました</p></label>
-        <br><a href="Subject_list.jsp">科目一覧</a>
+        <br><a href="SubjectSearch.action">科目一覧</a>
     </div>
 </div>
 

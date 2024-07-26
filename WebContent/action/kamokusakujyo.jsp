@@ -8,25 +8,14 @@
 
         <form action="SubjectDelete.action" method="post">
             <label>
-                <p>
-                    <%
-                        String name = request.getParameter("name");
-                        String cd = request.getParameter("cd");
-                        if (name == null || name.isEmpty()) {
-                            name = "国語";
-                        }
-                        if (cd == null || cd.isEmpty()) {
-                            cd = "A01";
-                        }
-                    %>
-                    「<%= name %>（<%= cd %>）」を削除してもよろしいですか
+                <p><%= request.getParameter("name") %>">（<%= request.getParameter("cd") %>">）」を削除してもよろしいですか
                 </p>
             </label>
-            <input type="hidden" name="cd" value="<%= cd %>">
-            <input type="hidden" name="name" value="<%= name %>">
+            <input type="hidden" name="cd" value="<%= request.getParameter("cd") %>">">
+            <input type="hidden" name="name" value="<%= request.getParameter("name") %>">">
             <input type="submit" value="削除" style="background-color: red; color: white; border-radius: 8px; padding: 10px 10px; border: none; cursor: pointer;">
         </form>
-        <br><a href="Subject_list.jsp">戻る</a>
+        <br><a href="SubjectSearch.action">戻る</a>
     </div>
 </div>
 

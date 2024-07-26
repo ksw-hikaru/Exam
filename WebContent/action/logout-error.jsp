@@ -5,11 +5,11 @@
 	<h1>得点管理システム</h1>
 </div>
 <div class="container">
-<div class="sidebar">
-</div>
-<div class="content">
-<li>エラーが発生しました</li>
-<a href="login-in.jsp">ログイン画面へ</a>
-</div>
+	<div class="sidebar">
+	</div>
+	<div class="content">
+	<li>エラーが発生しました</li>
+	<a href="login-in.jsp">ログイン画面へ</a>
+	</div>
 </div>
 <%@include file="../footer.jsp" %>
