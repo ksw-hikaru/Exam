@@ -9,7 +9,7 @@
 <div class="container">
     <%@include file="menu.jsp" %>
     <div class="content">
-        <h2>科目情報更新</h2>
+        <h2>科目情報変更</h2>
         <form action="SubjectUpdate.action" method="post">
         	<div>
         	<label>科目コード</label><br>
