@@ -18,7 +18,7 @@
         	${errorMessage}
         	<div>
         	<label>科目名</label><br>
-        	<input type="text"id="name"name="name"value=""><br>
+        	<input type="text"id="name"name="name"value=""required><br>
         	</div>
             <button type="submit">変更</button>
         </form>

@@ -9,7 +9,7 @@
         <div class="message">
             変更が完了しました
         </div>
-        <a href="subjectList.action" class="back-link">科目一覧</a>
+        <a href="SubjectSearch.action" class="back-link">科目一覧</a>
     </div>
 </div>
 <%@ include file="../footer.jsp" %>
